@@ -35,7 +35,7 @@ cd /usr/share/nginx/html &>>$LOG_FILE
 validate $? "cd into /usr/share/nginx/html"
 unzip /tmp/web.zip &>>$LOG_FILE
 validate $? "unzip web.zip"
-cp /home/ec2-user/roboshop-shell-2025/roboshop.conf /etc/nginx/default.d/roboshop.conf  &>>$LOG_FILE
+cp /home/ec2-user/roboshop-shell-tf-2025/roboshop.conf /etc/nginx/default.d/roboshop.conf  &>>$LOG_FILE
 validate $? "copy roboshop.conf"
 systemctl restart nginx &>>$LOG_FILE
 validate $? "restart nginx"
