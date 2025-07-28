@@ -52,7 +52,7 @@ curl -L -o /tmp/user.zip https://roboshop-builds.s3.amazonaws.com/user.zip &>>$L
  validate $? "unzip into app directory"
  npm install &>>$LOG_FILE
  validate $? "installing dependencies"
- cp /home/ec2-user/roboshop-shell-2025/user.service   /etc/systemd/system/user.service &>>$LOG_FILE
+ cp /home/ec2-user/roboshop-shell-tf-2025/user.service   /etc/systemd/system/user.service &>>$LOG_FILE
  validate $? "copying catalogue.service"
  systemctl daemon-reload &>>$LOG_FILE
 validate $? "load the service"
@@ -60,7 +60,7 @@ systemctl enable user &>>$LOG_FILE
 validate $? "enable service"
 systemctl start user &>>$LOG_FILE
 validate $? "start the service"
-cp /home/ec2-user/roboshop-shell-2025/mongo.repo  /etc/yum.repos.d/mongo.repo &>>$LOG_FILE
+cp /home/ec2-user/roboshop-shell-tf-2025/mongo.repo  /etc/yum.repos.d/mongo.repo &>>$LOG_FILE
 validate $? "copying mongo.repo"
 dnf install -y mongodb-mongosh &>>$LOG_FILE
 validate $? "installing mongodb-mongosh"

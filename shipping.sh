@@ -51,7 +51,7 @@ curl -L -o /tmp/shipping.zip https://roboshop-artifacts.s3.amazonaws.com/shippin
  validate $? "installing dependencies"
  mv target/shipping-1.0.jar shipping.jar  &>>$LOG_FILE
  validate $? "moving shipping.jar"
- cp /home/ec2-user/roboshop-shell-2025/shipping.service   /etc/systemd/system/shipping.service &>>$LOG_FILE
+ cp /home/ec2-user/roboshop-shell-tf-2025/shipping.service   /etc/systemd/system/shipping.service &>>$LOG_FILE
  validate $? "copying shipping.service"
  systemctl daemon-reload &>>$LOG_FILE
 validate $? "load the service"

@@ -49,7 +49,7 @@ curl -L -o /tmp/payment.zip https://roboshop-artifacts.s3.amazonaws.com/payment-
  validate $? "unzip into app directory"
  pip3 install -r requirements.txt &>>$LOG_FILE
  validate $? "installing dependencies"
- cp /home/ec2-user/roboshop-shell-2025/payment.service   /etc/systemd/system/payment.service &>>$LOG_FILE
+ cp /home/ec2-user/roboshop-shell-tf-2025/payment.service   /etc/systemd/system/payment.service &>>$LOG_FILE
  validate $? "copying payment.service"
  systemctl daemon-reload &>>$LOG_FILE
 validate $? "load the service"

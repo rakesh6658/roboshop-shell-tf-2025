@@ -52,7 +52,7 @@ curl -o /tmp/cart.zip https://roboshop-builds.s3.amazonaws.com/cart.zip &>>$LOG_
  validate $? "unzip into app directory"
  npm install &>>$LOG_FILE
  validate $? "installing dependencies"
- cp /home/ec2-user/roboshop-shell-2025/cart.service   /etc/systemd/system/cart.service &>>$LOG_FILE
+ cp /home/ec2-user/roboshop-shell-tf-2025/cart.service   /etc/systemd/system/cart.service &>>$LOG_FILE
  validate $? "copying cart.service"
  systemctl daemon-reload &>>$LOG_FILE
 validate $? "load the service"
