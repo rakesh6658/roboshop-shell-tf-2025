@@ -21,7 +21,7 @@ then
     echo -e "$2.... $G success $N"
     fi
  }
- cp /home/ec2-user/roboshop-shell-2025/rabbitmq.repo /etc/yum.repos.d/rabbitmq.repo &>>$LOG_FILE
+ cp /home/ec2-user/roboshop-shell-tf-2025/rabbitmq.repo /etc/yum.repos.d/rabbitmq.repo &>>$LOG_FILE
  validate $? "copying rabbitmq.repo"
  dnf install rabbitmq-server -y &>>$LOG_FILE
 validate $? "installing rabbitmq"
