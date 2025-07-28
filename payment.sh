@@ -45,7 +45,7 @@ curl -L -o /tmp/payment.zip https://roboshop-artifacts.s3.amazonaws.com/payment-
  rm -rf /app/*
  cd /app &>>$LOG_FILE
  validate $? "cd into app"
- unzip -o /tmp/payment.zip &>>$LOG_FILE
+ unzip -o /tmp/payment.zip &>>$LOG_FILE 
  validate $? "unzip into app directory"
  pip3 install -r requirements.txt &>>$LOG_FILE
  validate $? "installing dependencies"
